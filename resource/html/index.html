@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/classic.min.css">
+    <title>ORIZIN Fontviewer</title>
+</head>
+<body>
+    <header>
+        ORIZIN Fontviewer
+    </header>
+    <main>
+        <div id="preview_control">
+            <span class="multilingual" data-ja="プレビューコントロールを左へ移動" data-en="Move the preview control to the left"></span><toggle-switch id="move_to_left_toggle"></toggle-switch><br>
+            <span class="multilingual" data-ja="背景色" data-en="Background color"></span><div id="background_color_picker" class="color_picker"></div><br>
+            <span class="multilingual" data-ja="フォントカラー" data-en="Font color"></span><div id="font_color_picker" class="color_picker"></div><br>
+            <span class="multilingual" data-ja="ダークモード" data-en="Dark mode"></span><toggle-switch id="dark_mode_toggle"></toggle-switch>
+            <span class="multilingual" data-ja="サンプルテキスト: " data-en="Sample text: "></span><underlined-textbox value="Sample Text" id="sample_text_input"></underlined-textbox><br>
+            <span class="multilingual" data-ja="フォント名で検索: " data-en="Search by font name: "></span><underlined-textbox id="font_name_search_input"></underlined-textbox><br>
+            <span class="multilingual" data-ja="斜体" data-en="Italic"></span><toggle-switch id="italic_toggle"></toggle-switch><br>
+            <span class="multilingual" data-ja="太字" data-en="Bold"></span><toggle-switch id="bold_toggle"></toggle-switch><br>
+            <span class="multilingual" data-ja="フォントウェイト" data-en="Font weight"></span><input type="range" id="font_weight_range" min="1" max="1000" step="1" value="400"><input type="text" value="400" id="font_weight_text">
+            <button id="open_about_font_weight_button">
+                <span class="multilingual" data-ja="フォントウェイトについて" data-en="About font weight"></span>
+            </button>
+            <div id="about_font_weight">
+                <ul>
+                    <li>
+                        100: Thin (Hairline)
+                    </li>
+                    <li>
+                        200: Extra Light (Ultra Light)
+                    </li>
+                    <li>
+                        300: Light
+                    </li>
+                    <li>
+                        400: Normal (Regular)
+                    </li>
+                    <li>
+                        500: Medium
+                    </li>
+                    <li>
+                        600: Semi Bold (Demi Bold)
+                    </li>
+                    <li>
+                        700: Bold
+                    </li>
+                    <li>
+                        800: Extra Bold (Ultra Bold)
+                    </li>
+                    <li>
+                        900 Black (Heavy)
+                    </li>
+                    <li>
+                        950: Extra Black (Ultra Black)
+                    </li>
+                </ul>
+                <span class="multilingual" data-ja="フォントによっては一部の太さに対応していない場合があります。また、可変フォントの場合は1から1000の範囲でさらに詳細に太さを指定できます。" data-en="Some fonts may not support some weights. You can also specify a more detailed weight in the range of 1 to 1000 for variable fonts."></span><br>
+                <button id="close_about_font_weight_button">
+                    <span class="multilingual" data-ja="閉じる" data-en="Close"></span>
+                </button>
+            </div>
+        </div>
+        <div id="preview_area">
+            <span class="multilingual" data-ja="フォントの一覧を取得中..." data-en="Getting font list..."></span><br>
+        </div>
+        <div id="loading"></div>
+        <div id="overlay"></div>
+    </main>
+    <script src="/eel.js"></script>
+    <script src="../javascript/orizin_ui.min.js"></script>
+    <script src="../javascript/pickr.min.js"></script>
+    <script src="../javascript/main.js"></script>
+</body>
+</html>
