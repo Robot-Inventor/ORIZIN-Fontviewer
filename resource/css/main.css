@@ -3,7 +3,7 @@
     --background_color: white;
     --font_color: #111111;
     --underlined_textbox_color: #555555;
-    --font_name_color: #eeeeee;#555555;
+    --font_name_color: #555555;
 }
 
 @media (prefers-color-scheme: dark) {
